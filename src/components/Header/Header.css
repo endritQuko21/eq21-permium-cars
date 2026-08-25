@@ -52,6 +52,7 @@
   text-transform: uppercase;
   color: var(--c-brass);
   transition: background 0.25s ease, color 0.25s ease;
+  background: transparent;
 }
 
 .eq-header__cta:hover { background: var(--c-brass); color: var(--c-black); }

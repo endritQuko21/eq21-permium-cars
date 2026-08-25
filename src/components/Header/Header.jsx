@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { useContactModal } from '../../context/ContactModalContext'
 import './Header.css'
 
 export default function Header() {
@@ -26,7 +27,9 @@ export default function Header() {
           <a href="/#cita">Contacto</a>
         </nav>
 
-        <a href="/#cita" className="eq-header__cta">Cita Privada</a>
+        <button type="button" className="eq-header__cta" onClick={() => openModal(null)}>
+          Cita Privada
+        </button>
       </div>
     </header>
   )

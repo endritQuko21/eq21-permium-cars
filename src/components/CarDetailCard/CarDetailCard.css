@@ -42,20 +42,7 @@
 
 .eq-detail-card__year { font-size: 0.8rem; color: var(--c-steel-dim); }
 
-.eq-detail-card__toggle {
-  margin-top: 1.2rem;
-  background: none;
-  border: 1px solid var(--c-line);
-  color: var(--c-paper);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.6rem 0;
-  transition: border-color 0.25s ease, color 0.25s ease;
-}
-.eq-detail-card__toggle:hover { border-color: var(--c-brass); color: var(--c-brass); }
-
-.eq-detail-card__specs { margin-top: 1.1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 1rem; }
+.eq-detail-card__specs { margin-top: 1.3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 1rem; }
 .eq-detail-card__specs dt { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-steel-dim); }
 .eq-detail-card__specs dd { font-size: 0.85rem; color: var(--c-paper); margin-top: 0.2rem; }
 
@@ -65,8 +52,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
 }
-.eq-detail-card__footer span { color: var(--c-steel-dim); font-style: italic; }
+.eq-detail-card__price { font-family: var(--font-display); font-size: 1.15rem; color: var(--c-paper); }
 .eq-detail-card__footer a { color: var(--c-brass); transition: opacity 0.2s ease; }
 .eq-detail-card__footer a:hover { opacity: 0.7; }
+
+.eq-detail-card__price-row {
+  margin-top: auto;
+  padding-top: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.78rem;
+  color: var(--c-steel-dim);
+}
+.eq-detail-card__price-row strong { font-family: var(--font-display); font-size: 1.2rem; color: var(--c-paper); }
+
+.eq-detail-card__cta {
+  margin-top: 0.9rem;
+  width: 100%;
+  background: var(--c-brass);
+  color: var(--c-black);
+  border: none;
+  padding: 0.85rem 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.25s ease;
+}
+.eq-detail-card__cta:hover { background: #C4A876; }

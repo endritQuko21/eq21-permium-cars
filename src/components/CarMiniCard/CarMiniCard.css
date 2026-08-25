@@ -26,9 +26,11 @@
   font-weight: 400;
   font-size: 1.25rem;
   color: var(--c-paper);
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 0.8rem;
 }
 .eq-mini-card__body h3 em { font-style: italic; color: var(--c-steel); }
 
-.eq-mini-card__link { font-size: 0.75rem; letter-spacing: 0.06em; color: var(--c-brass); transition: opacity 0.2s ease; }
+.eq-mini-card__footer { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+.eq-mini-card__price { font-family: var(--font-display); font-size: 1.05rem; color: var(--c-paper); }
+.eq-mini-card__link { font-size: 0.75rem; letter-spacing: 0.06em; color: var(--c-brass); transition: opacity 0.2s ease; background: none; border: none; padding: 0; }
 .eq-mini-card__link:hover { opacity: 0.7; }

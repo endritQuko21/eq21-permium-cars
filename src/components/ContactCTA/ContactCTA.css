@@ -1,0 +1,16 @@
+.eq-cta-band { padding: clamp(4rem, 8vw, 7rem) 0; text-align: center; }
+.eq-cta-band__inner { max-width: 620px; margin: 0 auto; }
+.eq-cta-band__inner h2 { margin: 0.8rem 0 1.2rem; }
+.eq-cta-band__inner p { color: var(--c-steel); font-size: 0.95rem; margin-bottom: 2rem; }
+
+.eq-cta-band__button {
+  background: var(--c-brass);
+  color: var(--c-black);
+  border: none;
+  padding: 1rem 2.4rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+.eq-cta-band__button:hover { background: #C4A876; transform: translateY(-1px); }

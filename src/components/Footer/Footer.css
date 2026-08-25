@@ -1,0 +1,24 @@
+.eq-footer { background: var(--c-panel); padding-top: clamp(3rem, 6vw, 5rem); }
+
+.eq-footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.eq-footer__logo { font-family: var(--font-display); font-size: 1.4rem; color: var(--c-paper); }
+
+.eq-footer__brand p { margin-top: 0.8rem; color: var(--c-steel); font-size: 0.85rem; max-width: 32ch; }
+
+.eq-footer__nav, .eq-footer__contact { display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.85rem; }
+
+.eq-footer__nav a, .eq-footer__contact a { color: var(--c-steel); transition: color 0.25s ease; }
+.eq-footer__nav a:hover, .eq-footer__contact a:hover { color: var(--c-brass); }
+
+.eq-footer__legal { padding: 1.5rem 0; font-size: 0.72rem; color: var(--c-steel-dim); }
+
+@media (max-width: 780px) {
+  .eq-footer__inner { grid-template-columns: 1fr; }
+}

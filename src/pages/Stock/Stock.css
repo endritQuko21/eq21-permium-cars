@@ -1,0 +1,22 @@
+.eq-stock { padding: clamp(7rem, 12vw, 9rem) 0 5rem; }
+
+.eq-stock__header p { color: var(--c-steel-dim); font-size: 0.85rem; margin-top: 0.6rem; }
+
+.eq-stock__filters { display: flex; gap: 0.6rem; margin: 2.5rem 0; flex-wrap: wrap; }
+
+.eq-stock__filters button {
+  background: none;
+  border: 1px solid var(--c-line);
+  color: var(--c-steel);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+.eq-stock__filters button.is-active,
+.eq-stock__filters button:hover { border-color: var(--c-brass); color: var(--c-brass); }
+
+.eq-stock__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+
+@media (max-width: 980px) { .eq-stock__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .eq-stock__grid { grid-template-columns: 1fr; } }

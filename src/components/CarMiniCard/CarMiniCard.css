@@ -1,0 +1,34 @@
+.eq-mini-card { background: var(--c-panel); border: 1px solid var(--c-line); }
+
+.eq-mini-card__media {
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--c-panel-2);
+  display: flex;
+  align-items: flex-end;
+  padding: 0.9rem;
+}
+
+.eq-mini-card__ref {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--c-paper);
+  background: rgba(11, 12, 14, 0.65);
+  padding: 0.3rem 0.6rem;
+  backdrop-filter: blur(4px);
+}
+
+.eq-mini-card__body { padding: 1.4rem 1.4rem 1.6rem; }
+
+.eq-mini-card__body h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--c-paper);
+  margin: 0.5rem 0 1rem;
+}
+.eq-mini-card__body h3 em { font-style: italic; color: var(--c-steel); }
+
+.eq-mini-card__link { font-size: 0.75rem; letter-spacing: 0.06em; color: var(--c-brass); transition: opacity 0.2s ease; }
+.eq-mini-card__link:hover { opacity: 0.7; }

@@ -1,0 +1,8 @@
+.eq-arrivals__header { margin-bottom: 2.5rem; }
+.eq-arrivals__header h2 { margin-top: 0.6rem; }
+
+.eq-arrivals__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+@media (max-width: 900px) {
+  .eq-arrivals__grid { grid-template-columns: 1fr; }
+}

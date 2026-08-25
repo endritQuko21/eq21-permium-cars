@@ -1,0 +1,14 @@
+.eq-manifesto__inner { max-width: 780px; }
+
+.eq-manifesto__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  color: var(--c-paper);
+  line-height: 1.4;
+  margin: 1.2rem 0 1.8rem;
+  border-left: 2px solid var(--c-brass);
+  padding-left: 1.6rem;
+}
+
+.eq-manifesto__text { color: var(--c-steel); font-size: 0.95rem; max-width: 62ch; }

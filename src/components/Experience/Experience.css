@@ -1,18 +1,66 @@
-.eq-experience__grid { margin-top: 3rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.eq-experience__timeline {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
 
-.eq-experience__step { border-top: 1px solid var(--c-line); padding-top: 1.2rem; }
+.eq-experience__timeline::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--c-line);
+}
 
-.eq-experience__number { font-family: var(--font-display); font-style: italic; color: var(--c-brass); font-size: 1.1rem; }
+.eq-experience__node {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--c-brass-dim);
+  background: var(--c-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-brass);
+  margin-bottom: 1.4rem;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+.eq-experience__step:hover .eq-experience__node { border-color: var(--c-brass); color: var(--c-paper); }
+
+.eq-experience__number {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--c-brass);
+  color: var(--c-black);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.65rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .eq-experience__step h3 {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.15rem;
   color: var(--c-paper);
-  margin: 0.8rem 0 0.6rem;
+  margin-bottom: 0.6rem;
 }
 
-.eq-experience__step p { font-size: 0.85rem; color: var(--c-steel); }
+.eq-experience__step p { font-size: 0.85rem; color: var(--c-steel); max-width: 30ch; }
 
-@media (max-width: 900px) { .eq-experience__grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .eq-experience__grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .eq-experience__timeline { grid-template-columns: 1fr 1fr; }
+  .eq-experience__timeline::before { display: none; }
+}
+@media (max-width: 560px) {
+  .eq-experience__timeline { grid-template-columns: 1fr; }
+}

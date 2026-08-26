@@ -1,4 +1,5 @@
 import { useContactModal } from '../../context/ContactModalContext.jsx'
+import { formatPrice, formatKm, formatPower } from '../../utils/format.js'
 import './CarDetailCard.css'
 
 export default function CarDetailCard({ car }) {
@@ -18,14 +19,14 @@ export default function CarDetailCard({ car }) {
 
         <dl className="eq-detail-card__specs">
           <div><dt>Motor</dt><dd>{car.engine}</dd></div>
-          <div><dt>Potencia</dt><dd>{car.power}</dd></div>
+          <div><dt>Potencia</dt><dd>{formatPower(car.power)}</dd></div>
           <div><dt>Transmisión</dt><dd>{car.transmission}</dd></div>
-          <div><dt>Kilometraje</dt><dd>{car.mileage}</dd></div>
+          <div><dt>Kilometraje</dt><dd>{formatKm(car.mileage)}</dd></div>
         </dl>
 
         <div className="eq-detail-card__price-row">
           <span>Precio</span>
-          <strong>{car.price}</strong>
+          <strong>{formatPrice(car.price)}</strong>
         </div>
 
         <button type="button" className="eq-detail-card__cta" onClick={() => openModal(car)}>

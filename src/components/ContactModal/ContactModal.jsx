@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { cars } from '../../data/cars.js'
 import { useContactModal } from '../../context/ContactModalContext.jsx'
+import { formatPrice } from '../../utils/format.js'
 import './ContactModal.css'
 
 export default function ContactModal() {
@@ -58,7 +59,7 @@ export default function ContactModal() {
               <div className="eq-modal__car-chip-info">
                 <span>{car.ref}</span>
                 <strong>{car.brand} {car.model}</strong>
-                <span className="eq-modal__car-chip-price">{car.price}</span>
+                <span className="eq-modal__car-chip-price">{formatPrice(car.price)}</span>
               </div>
               <div className="eq-modal__car-chip-actions">
                 <button type="button" onClick={() => setPickerOpen((v) => !v)}>Cambiar</button>

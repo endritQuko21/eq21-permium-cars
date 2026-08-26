@@ -7,11 +7,14 @@ export default function ContactCTA() {
   return (
     <section className="eq-cta-band" id="cita">
       <div className="eq-container eq-cta-band__inner">
-        <span className="eq-eyebrow">Acceso a la colección</span>
-        <h2 className="eq-section-title">Solicite una cita privada</h2>
-        <p>Las visitas a la sala de exposición se realizan bajo cita. Le confirmamos disponibilidad en menos de 24 horas.</p>
+        <span className="eq-eyebrow">Encargos a medida</span>
+        <h2 className="eq-section-title">¿Busca un modelo concreto?</h2>
+        <p>
+          Si no encuentra la unidad que necesita en la colección actual, nuestro equipo la localiza
+          a través de la red de contactos EQ21, dentro y fuera de España.
+        </p>
         <button type="button" className="eq-cta-band__button" onClick={() => openModal(null)}>
-          Solicitar información
+          Iniciar búsqueda a medida
         </button>
       </div>
     </section>

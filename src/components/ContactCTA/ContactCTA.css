@@ -1,7 +1,27 @@
-.eq-cta-band { padding: clamp(4rem, 8vw, 7rem) 0; text-align: center; }
-.eq-cta-band__inner { max-width: 620px; margin: 0 auto; }
+.eq-cta-band { padding: clamp(4rem, 8vw, 7rem) 0; }
+
+.eq-cta-band__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid var(--c-brass-dim);
+  padding: clamp(3rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
+  position: relative;
+}
+
+.eq-cta-band__inner::before,
+.eq-cta-band__inner::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--c-brass);
+}
+.eq-cta-band__inner::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.eq-cta-band__inner::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
 .eq-cta-band__inner h2 { margin: 0.8rem 0 1.2rem; }
-.eq-cta-band__inner p { color: var(--c-steel); font-size: 0.95rem; margin-bottom: 2rem; }
+.eq-cta-band__inner p { color: var(--c-steel); font-size: 0.95rem; margin-bottom: 2rem; max-width: 50ch; margin-left: auto; margin-right: auto; }
 
 .eq-cta-band__button {
   background: var(--c-brass);

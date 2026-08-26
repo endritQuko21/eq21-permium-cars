@@ -1,9 +1,11 @@
-.eq-manifesto__inner { max-width: 780px; }
+.eq-manifesto__grid { display: grid; grid-template-columns: 1.7fr 0.5fr; gap: 4rem; align-items: stretch; }
+
+.eq-manifesto__main { max-width: 640px; }
 
 .eq-manifesto__quote {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
   color: var(--c-paper);
   line-height: 1.4;
   margin: 1.2rem 0 1.8rem;
@@ -11,4 +13,44 @@
   padding-left: 1.6rem;
 }
 
-.eq-manifesto__text { color: var(--c-steel); font-size: 0.95rem; max-width: 62ch; }
+.eq-manifesto__text { color: var(--c-steel); font-size: 0.95rem; max-width: 60ch; margin-bottom: 1.6rem; }
+
+.eq-manifesto__signature {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--c-brass);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--c-line);
+  width: fit-content;
+}
+
+.eq-manifesto__plaque {
+  border-left: 1px solid var(--c-line);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.eq-manifesto__plaque-mark {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--c-brass-dim);
+  line-height: 1;
+}
+
+.eq-manifesto__plaque-text {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-steel-dim);
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 780px) {
+  .eq-manifesto__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .eq-manifesto__plaque { border-left: none; border-top: 1px solid var(--c-line); padding-left: 0; padding-top: 1.5rem; flex-direction: row; align-items: center; justify-content: space-between; }
+}

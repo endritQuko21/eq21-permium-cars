@@ -1,0 +1,55 @@
+.eq-maker {
+  background: var(--c-black);
+  border-top: 1px solid var(--c-line);
+  padding: clamp(3.5rem, 7vw, 5rem) 0;
+  text-align: center;
+}
+
+.eq-maker__plate-label {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--c-steel-dim);
+  border: 1px solid var(--c-line);
+  padding: 0.35rem 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.eq-maker__signature-wrap { position: relative; display: inline-block; }
+
+.eq-maker__signature {
+  font-family: var(--font-signature);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  color: var(--c-paper);
+  line-height: 1;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.eq-maker__signature-wrap.is-visible .eq-maker__signature { clip-path: inset(0 0% 0 0); }
+
+.eq-maker__underline { display: block; width: 100%; height: 14px; margin-top: -4px; overflow: visible; }
+.eq-maker__underline path {
+  fill: none;
+  stroke: var(--c-brass);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  transition: stroke-dashoffset 1.1s ease 0.5s;
+}
+.eq-maker__signature-wrap.is-visible .eq-maker__underline path { stroke-dashoffset: 0; }
+
+.eq-maker__meta {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--c-steel-dim);
+  letter-spacing: 0.03em;
+  flex-wrap: wrap;
+}
+.eq-maker__divider { width: 1px; height: 12px; background: var(--c-line); }

@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { cars } from '../../data/cars.js'
 import CarDetailCard from '../../components/CarDetailCard/CarDetailCard.jsx'
 import StockFilters from '../../components/StockFilters/StockFilters.jsx'
@@ -26,7 +27,12 @@ const sortOptions = [
 ]
 
 export default function Stock() {
-  const [filters, setFilters] = useState(defaultFilters)
+  const [searchParams] = useSearchParams()
+  const [filters, setFilters] = useState(() => ({
+    ...defaultFilters,
+    search: searchParams.get('q') || '',
+    categories: searchParams.get('category') ? [searchParams.get('category')] : [],
+  }))
   const [sort, setSort] = useState('relevance')
   const [filtersOpen, setFiltersOpen] = useState(false)
 

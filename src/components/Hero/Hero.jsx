@@ -20,13 +20,13 @@ export default function Hero() {
 
   return (
     <section className="eq-hero">
-      <div className="eq-hero__marquee" aria-hidden="true">
+      {/*<div className="eq-hero__marquee" aria-hidden="true">
         <div className="eq-hero__marquee-track">
           {[...cars, ...cars].map((c, i) => (
             <span key={`${c.id}-${i}`}>{c.ref} — {c.brand} {c.model}</span>
           ))}
         </div>
-      </div>
+      </div>*/}
 
       <div className="eq-container eq-hero__grid">
         <div className="eq-hero__intro">
